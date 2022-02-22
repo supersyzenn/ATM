@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <title>ATM Sederhana</title>
+</head>
+<body class="bg-blue-700">
+    <div class="flex">
+        <div class="w-1/2 mt-10 ml-20">
+            <img src="/img/pin.png" alt="pin">
+        </div>
+
+        <div class="w-1/2 mt-20">
+            <p class="text-3xl font-bold ml-20 mt-10 text-white ">MASUKAN PIN</p>
+
+            <form action="" onsubmit="pin()">
+                <input type="password" placeholder="Masukan Pin Anda" required class="h-8 w-80 mt-32 text-black" id="angkapin">
+                <input type="submit" class="text-white text-2xl font-semibold" value="ENTER">
+            </form>
+    
+            <p class="text-3xl font-bold mr-56 mt-24 text-white text-center">TEKAN 'ENTER' JIKA SELESAI <br> MEMASUKAN PIN</p>
+        </div>
+    </div>
+</body>
+<script>
+    function pin() {
+        //let untuk membuat suatu variable
+        let pin = document.getElementById("angkapin").value;
+        if (pin == '123456') {
+            window.open('4.pakettunai.html', '_blank');
+            window.close('3.masukanpin.html');
+        } else {
+            alert('pin yang anda masukan salah')
+        }
+    };
+</script>
+</html>
